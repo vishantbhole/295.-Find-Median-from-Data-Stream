@@ -55,3 +55,17 @@ if __name__ == '__main__':
             else:
                 output.append(None)
 
+     # Format the final list to match the desired output style
+    def format_output(results):
+        formatted_results = []
+        for res in results:
+            if res is None:
+                formatted_results.append("null")
+            else:
+                # Format floating point numbers to 5 decimal places
+                formatted_results.append(f"{res:.5f}")
+        return f"[{','.join(formatted_results)}]"
+
+    print("Output is : ", format_output(output))
+
+
